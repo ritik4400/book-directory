@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Book Management</h1>
+
+    <!-- Create Book Form -->
+    <h2>Create a New Book</h2>
+    <form id="createBookForm">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="author" placeholder="Author" required>
+        <input type="text" id="isbn" placeholder="ISBN" required>
+        <button type="submit">Create Book</button>
+    </form>
+
+    <!-- Display All Books -->
+    <h2>All Books</h2>
+    <button id="getAllBooks">Get All Books</button>
+    <ul id="bookList"></ul>
+
+    <!-- Get Book by ID -->
+    <h2>Find Book by ID</h2>
+    <input type="text" id="bookId" placeholder="Book ID">
+    <button id="getBookById">Find Book</button>
+    <div id="bookDetails"></div>
+
+    <script src="js/main.js"></script>
+</div>
+</body>
+</html>
