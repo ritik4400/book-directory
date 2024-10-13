@@ -1,121 +1,126 @@
-/* Global Styling */
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f06, #f90);
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: #333;
 }
 
-.container {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
-    margin: 20px;
-}
-
-/* Heading and Text Styling */
 h1 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #4c6ef5;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: 28px; /* Increase size if needed */
 }
 
 h2 {
-    font-size: 1.8rem;
-    color: #3e64ff;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
     margin-bottom: 10px;
+    font-size: 28px; /* Increase size if needed */
 }
 
+/* Form Styles */
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-form input {
-    padding: 10px;
-    margin: 10px 0;
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"] {
     width: 100%;
-    max-width: 400px;
-    border: 2px solid #74ebd5;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    transition: 0.3s ease;
-    outline: none;
-    font-size: 1rem;
-}
-
-form input:focus {
-    border-color: #4c6ef5;
+    font-size: 16px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 button {
-    padding: 12px 20px;
-    background-color: #4c6ef5;
-    border: none;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
     color: white;
-    font-size: 1rem;
+    font-size: 18px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #3e64ff;
-    transform: scale(1.05);
+    background-color: #218838;
 }
 
-/* Interactive Hover Effect for Button */
-button:active {
-    transform: scale(0.98);
-}
-
+/* Book List Styles */
 #bookList {
-    list-style-type: none;
+    max-width: 600px;
+    margin: 30px auto;
     padding: 0;
+    list-style: none;
 }
 
 #bookList li {
-    background-color: #f8f9fa;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-left: 4px solid #74ebd5;
-    border-radius: 5px;
-    transition: 0.3s ease;
-    font-size: 1.1rem;
-}
-
-#bookList li:hover {
-    background-color: #e3f2fd;
-    border-left-color: #4c6ef5;
-    transform: translateX(5px);
-}
-
-/* Get Book by ID Styling */
-#bookDetails {
+    background: #fff;
     padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bookList span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Button Styles */
+button.editBtn, button.deleteBtn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.editBtn:hover {
+    background-color: #0056b3;
+}
+
+button.deleteBtn {
+    background-color: #dc3545;
+}
+
+button.deleteBtn:hover {
+    background-color: #c82333;
+}
+
+#updateBtn {
+    background-color: #ffc107;
+    display: none;
     margin-top: 10px;
-    background-color: #f1f3f5;
-    border-radius: 5px;
-    border-left: 4px solid #4c6ef5;
-    font-size: 1.2rem;
-    text-align: center;
 }
 
-/* Button to Fetch All Books */
-#bookDetails, #getAllBooks {
-    margin-top: 15px;
-}
-
-/* Add subtle box-shadow to make the form and book entries pop */
-form, #bookDetails {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+#updateBtn:hover {
+    background-color: #e0a800;
 }
